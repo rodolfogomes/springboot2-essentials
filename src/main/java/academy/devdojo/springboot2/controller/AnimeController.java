@@ -38,5 +38,11 @@ public class AnimeController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @PutMapping
+    public ResponseEntity<?> replace(@PathVariable long id,@RequestBody Anime anime){
+        animeService.replace(id,anime);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }
 
