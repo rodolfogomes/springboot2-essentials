@@ -1,4 +1,4 @@
-package academy.devdojo.springboot2.service;
+        package academy.devdojo.springboot2.service;
 
 import academy.devdojo.springboot2.domain.Anime;
 import org.springframework.http.HttpStatus;
@@ -36,12 +36,13 @@ public class AnimeService {
          return anime;
     }
 
-	public void delete(long id) {
+    public void delete(long id) {
         animes.remove(findById(id));
-	}
+    }
 
-	public void replace(long id, Anime anime) {
+    public void replace(long id, Anime anime) {
         delete(id);
         save(anime);
-	}
+    }
+
 }
